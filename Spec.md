@@ -54,6 +54,8 @@ Standard format for protestant.json, catholic.json, and orthodox.json:
   }
 ]
 
+---
+
 ## 4. UI Shell & Navigation Hierarchy
 App Shell: Bottom navigation bar (fixed position, safe-area padding for mobile home indicators).
 Routes:
@@ -65,6 +67,8 @@ Routes:
 /goals — Goals View: Target pace configuration (e.g., 3 chapters/day or 1 year plan) and reading velocity charts.
 
 /settings — Settings View: Canon selector (Protestant 66, Catholic 73, Orthodox 76-81), backup/export JSON, clear data.
+
+---
 
 ## 5. Phased Implementation Plan
 
@@ -113,12 +117,16 @@ Phase 7: Mobile Polish & PWA Installation
 [ ] Test complete offline functionality via browser DevTools network throttling (offline mode).
 [ ] Validate bottom navigation clearance against iPhone home bar (env(safe-area-inset-bottom)).
 
+---
+
 ## 6. Acceptance Criteria (v1 Target)
 Zero Network Dependence: App fully loads and tracks reading when completely disconnected from the internet.
 
 State Isolation: Switching between Protestant and Orthodox canons retains previously completed progress for all shared books.
 
 Reactive UI: Marking a chapter complete immediately updates the Dashboard progress percentage and streak count without page reload.
+
+---
 
 ## 7. AI Agent Implementation Notes
 * **Dexie Compound Keys:** The progress table uses a compound array primary key `[bookId+chapter]`. When querying or updating, do not use concatenated strings (e.g., `db.progress.get("gen1")`). You MUST use array syntax: `db.progress.get(['gen', 1])`.
