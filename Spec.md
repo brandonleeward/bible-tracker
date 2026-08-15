@@ -32,9 +32,9 @@ db.version(1).stores({
   // Keyed by setting key (e.g., 'active_canon', 'goal_chapters_per_day')
   settings: 'key, value',
   
-  // Primary key: compound string `[canon+bookId+chapter]`
-  // Allows switching canons without corrupting reading state
-  progress: '[canon+bookId+chapter], canon, bookId, chapter, completedAt',
+  // Primary key: compound array `[bookId+chapter]`
+  // Allows progress for shared books (e.g., Genesis) to persist globally across canons
+  progress: '[bookId+chapter], bookId, chapter, completedAt',
   
   // Primary key: date string 'YYYY-MM-DD'
   // Tracks daily read count for streaks and pace calculations
@@ -71,7 +71,7 @@ Phase 1: Project Scaffold & PWA Shell
 [ ] Initialize Vite + React project.
 [ ] Install vite-plugin-pwa, dexie, and react-router-dom.
 [ ] Configure vite.config.js with PWA manifest (icons, standalone display mode, background colors).
-[ ] Add mobile viewport meta tags and safe-area CSS rules in index.html and App.css.
+[ ] Add mobile viewport meta tag (must include viewport-fit=cover) and safe-area CSS rules in index.html and App.css.
 [ ] Set up basic Dexie schema in src/db.js.
 [ ] Create basic routing shell with persistent BottomNav.
 
@@ -127,3 +127,6 @@ Reactive UI: Marking a chapter complete immediately updates the Dashboard progre
 2. **Handling Decrement on Unticking:** When a user unchecks a chapter, ensure your Dexie transaction decrements today's `dailyLog.chaptersRead` count so streaks and pace metrics remain accurate.
 
 3. **Safe Area Insets for iOS PWA:** Make sure your `App.css` includes `padding-bottom: env(safe-area-inset-bottom);` on the bottom navigation bar so navigation items don't overlap the iPhone home indicator bar.
+
+7. AI Agent Implementation Notes
+* **Dexie Compound Keys:** The progress table uses a compound array primary key `[bookId+chapter]`. When querying or updating, do not use concatenated strings (e.g., `db.progress.get("gen1")`). You MUST use array syntax: `db.progress.get(['gen', 1])`.
