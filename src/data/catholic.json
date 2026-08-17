@@ -1,0 +1,586 @@
+[
+  {
+    "id": "gen",
+    "name": "Genesis",
+    "testament": "OT",
+    "section": "Pentateuch",
+    "chapterCount": 50,
+    "isSupplementary": false
+  },
+  {
+    "id": "exo",
+    "name": "Exodus",
+    "testament": "OT",
+    "section": "Pentateuch",
+    "chapterCount": 40,
+    "isSupplementary": false
+  },
+  {
+    "id": "lev",
+    "name": "Leviticus",
+    "testament": "OT",
+    "section": "Pentateuch",
+    "chapterCount": 27,
+    "isSupplementary": false
+  },
+  {
+    "id": "num",
+    "name": "Numbers",
+    "testament": "OT",
+    "section": "Pentateuch",
+    "chapterCount": 36,
+    "isSupplementary": false
+  },
+  {
+    "id": "deu",
+    "name": "Deuteronomy",
+    "testament": "OT",
+    "section": "Pentateuch",
+    "chapterCount": 34,
+    "isSupplementary": false
+  },
+  {
+    "id": "jos",
+    "name": "Joshua",
+    "testament": "OT",
+    "section": "Historical Books",
+    "chapterCount": 24,
+    "isSupplementary": false
+  },
+  {
+    "id": "jdg",
+    "name": "Judges",
+    "testament": "OT",
+    "section": "Historical Books",
+    "chapterCount": 21,
+    "isSupplementary": false
+  },
+  {
+    "id": "rut",
+    "name": "Ruth",
+    "testament": "OT",
+    "section": "Historical Books",
+    "chapterCount": 4,
+    "isSupplementary": false
+  },
+  {
+    "id": "1sa",
+    "name": "1 Samuel",
+    "testament": "OT",
+    "section": "Historical Books",
+    "chapterCount": 31,
+    "isSupplementary": false
+  },
+  {
+    "id": "2sa",
+    "name": "2 Samuel",
+    "testament": "OT",
+    "section": "Historical Books",
+    "chapterCount": 24,
+    "isSupplementary": false
+  },
+  {
+    "id": "1ki",
+    "name": "1 Kings",
+    "testament": "OT",
+    "section": "Historical Books",
+    "chapterCount": 22,
+    "isSupplementary": false
+  },
+  {
+    "id": "2ki",
+    "name": "2 Kings",
+    "testament": "OT",
+    "section": "Historical Books",
+    "chapterCount": 25,
+    "isSupplementary": false
+  },
+  {
+    "id": "1ch",
+    "name": "1 Chronicles",
+    "testament": "OT",
+    "section": "Historical Books",
+    "chapterCount": 29,
+    "isSupplementary": false
+  },
+  {
+    "id": "2ch",
+    "name": "2 Chronicles",
+    "testament": "OT",
+    "section": "Historical Books",
+    "chapterCount": 36,
+    "isSupplementary": false
+  },
+  {
+    "id": "ezr",
+    "name": "Ezra",
+    "testament": "OT",
+    "section": "Historical Books",
+    "chapterCount": 10,
+    "isSupplementary": false
+  },
+  {
+    "id": "neh",
+    "name": "Nehemiah",
+    "testament": "OT",
+    "section": "Historical Books",
+    "chapterCount": 13,
+    "isSupplementary": false
+  },
+  {
+    "id": "tob",
+    "name": "Tobit",
+    "testament": "OT",
+    "section": "Historical Books",
+    "chapterCount": 14,
+    "isSupplementary": false
+  },
+  {
+    "id": "jdt",
+    "name": "Judith",
+    "testament": "OT",
+    "section": "Historical Books",
+    "chapterCount": 16,
+    "isSupplementary": false
+  },
+  {
+    "id": "est",
+    "name": "Esther",
+    "testament": "OT",
+    "section": "Historical Books",
+    "chapterCount": 16,
+    "isSupplementary": false
+  },
+  {
+    "id": "1ma",
+    "name": "1 Maccabees",
+    "testament": "OT",
+    "section": "Historical Books",
+    "chapterCount": 16,
+    "isSupplementary": false
+  },
+  {
+    "id": "2ma",
+    "name": "2 Maccabees",
+    "testament": "OT",
+    "section": "Historical Books",
+    "chapterCount": 15,
+    "isSupplementary": false
+  },
+  {
+    "id": "job",
+    "name": "Job",
+    "testament": "OT",
+    "section": "Wisdom",
+    "chapterCount": 42,
+    "isSupplementary": false
+  },
+  {
+    "id": "psa",
+    "name": "Psalms",
+    "testament": "OT",
+    "section": "Wisdom",
+    "chapterCount": 150,
+    "isSupplementary": false
+  },
+  {
+    "id": "pro",
+    "name": "Proverbs",
+    "testament": "OT",
+    "section": "Wisdom",
+    "chapterCount": 31,
+    "isSupplementary": false
+  },
+  {
+    "id": "ecc",
+    "name": "Ecclesiastes",
+    "testament": "OT",
+    "section": "Wisdom",
+    "chapterCount": 12,
+    "isSupplementary": false
+  },
+  {
+    "id": "sng",
+    "name": "Song of Solomon",
+    "testament": "OT",
+    "section": "Wisdom",
+    "chapterCount": 8,
+    "isSupplementary": false
+  },
+  {
+    "id": "wis",
+    "name": "Wisdom",
+    "testament": "OT",
+    "section": "Wisdom",
+    "chapterCount": 19,
+    "isSupplementary": false
+  },
+  {
+    "id": "sir",
+    "name": "Sirach",
+    "testament": "OT",
+    "section": "Wisdom",
+    "chapterCount": 51,
+    "isSupplementary": false
+  },
+  {
+    "id": "isa",
+    "name": "Isaiah",
+    "testament": "OT",
+    "section": "Major Prophets",
+    "chapterCount": 66,
+    "isSupplementary": false
+  },
+  {
+    "id": "jer",
+    "name": "Jeremiah",
+    "testament": "OT",
+    "section": "Major Prophets",
+    "chapterCount": 52,
+    "isSupplementary": false
+  },
+  {
+    "id": "lam",
+    "name": "Lamentations",
+    "testament": "OT",
+    "section": "Major Prophets",
+    "chapterCount": 5,
+    "isSupplementary": false
+  },
+  {
+    "id": "bar",
+    "name": "Baruch",
+    "testament": "OT",
+    "section": "Major Prophets",
+    "chapterCount": 6,
+    "isSupplementary": false
+  },
+  {
+    "id": "ezk",
+    "name": "Ezekiel",
+    "testament": "OT",
+    "section": "Major Prophets",
+    "chapterCount": 48,
+    "isSupplementary": false
+  },
+  {
+    "id": "dan",
+    "name": "Daniel",
+    "testament": "OT",
+    "section": "Major Prophets",
+    "chapterCount": 14,
+    "isSupplementary": false
+  },
+  {
+    "id": "hos",
+    "name": "Hosea",
+    "testament": "OT",
+    "section": "Minor Prophets",
+    "chapterCount": 14,
+    "isSupplementary": false
+  },
+  {
+    "id": "jol",
+    "name": "Joel",
+    "testament": "OT",
+    "section": "Minor Prophets",
+    "chapterCount": 3,
+    "isSupplementary": false
+  },
+  {
+    "id": "amo",
+    "name": "Amos",
+    "testament": "OT",
+    "section": "Minor Prophets",
+    "chapterCount": 9,
+    "isSupplementary": false
+  },
+  {
+    "id": "oba",
+    "name": "Obadiah",
+    "testament": "OT",
+    "section": "Minor Prophets",
+    "chapterCount": 1,
+    "isSupplementary": false
+  },
+  {
+    "id": "jon",
+    "name": "Jonah",
+    "testament": "OT",
+    "section": "Minor Prophets",
+    "chapterCount": 4,
+    "isSupplementary": false
+  },
+  {
+    "id": "mic",
+    "name": "Micah",
+    "testament": "OT",
+    "section": "Minor Prophets",
+    "chapterCount": 7,
+    "isSupplementary": false
+  },
+  {
+    "id": "nam",
+    "name": "Nahum",
+    "testament": "OT",
+    "section": "Minor Prophets",
+    "chapterCount": 3,
+    "isSupplementary": false
+  },
+  {
+    "id": "hab",
+    "name": "Habakkuk",
+    "testament": "OT",
+    "section": "Minor Prophets",
+    "chapterCount": 3,
+    "isSupplementary": false
+  },
+  {
+    "id": "zep",
+    "name": "Zephaniah",
+    "testament": "OT",
+    "section": "Minor Prophets",
+    "chapterCount": 3,
+    "isSupplementary": false
+  },
+  {
+    "id": "hag",
+    "name": "Haggai",
+    "testament": "OT",
+    "section": "Minor Prophets",
+    "chapterCount": 2,
+    "isSupplementary": false
+  },
+  {
+    "id": "zec",
+    "name": "Zechariah",
+    "testament": "OT",
+    "section": "Minor Prophets",
+    "chapterCount": 14,
+    "isSupplementary": false
+  },
+  {
+    "id": "mal",
+    "name": "Malachi",
+    "testament": "OT",
+    "section": "Minor Prophets",
+    "chapterCount": 4,
+    "isSupplementary": false
+  },
+  {
+    "id": "mat",
+    "name": "Matthew",
+    "testament": "NT",
+    "section": "Gospels",
+    "chapterCount": 28,
+    "isSupplementary": false
+  },
+  {
+    "id": "mrk",
+    "name": "Mark",
+    "testament": "NT",
+    "section": "Gospels",
+    "chapterCount": 16,
+    "isSupplementary": false
+  },
+  {
+    "id": "luk",
+    "name": "Luke",
+    "testament": "NT",
+    "section": "Gospels",
+    "chapterCount": 24,
+    "isSupplementary": false
+  },
+  {
+    "id": "jhn",
+    "name": "John",
+    "testament": "NT",
+    "section": "Gospels",
+    "chapterCount": 21,
+    "isSupplementary": false
+  },
+  {
+    "id": "act",
+    "name": "Acts",
+    "testament": "NT",
+    "section": "History",
+    "chapterCount": 28,
+    "isSupplementary": false
+  },
+  {
+    "id": "rom",
+    "name": "Romans",
+    "testament": "NT",
+    "section": "Pauline Epistles",
+    "chapterCount": 16,
+    "isSupplementary": false
+  },
+  {
+    "id": "1co",
+    "name": "1 Corinthians",
+    "testament": "NT",
+    "section": "Pauline Epistles",
+    "chapterCount": 16,
+    "isSupplementary": false
+  },
+  {
+    "id": "2co",
+    "name": "2 Corinthians",
+    "testament": "NT",
+    "section": "Pauline Epistles",
+    "chapterCount": 13,
+    "isSupplementary": false
+  },
+  {
+    "id": "gal",
+    "name": "Galatians",
+    "testament": "NT",
+    "section": "Pauline Epistles",
+    "chapterCount": 6,
+    "isSupplementary": false
+  },
+  {
+    "id": "eph",
+    "name": "Ephesians",
+    "testament": "NT",
+    "section": "Pauline Epistles",
+    "chapterCount": 6,
+    "isSupplementary": false
+  },
+  {
+    "id": "php",
+    "name": "Philippians",
+    "testament": "NT",
+    "section": "Pauline Epistles",
+    "chapterCount": 4,
+    "isSupplementary": false
+  },
+  {
+    "id": "col",
+    "name": "Colossians",
+    "testament": "NT",
+    "section": "Pauline Epistles",
+    "chapterCount": 4,
+    "isSupplementary": false
+  },
+  {
+    "id": "1th",
+    "name": "1 Thessalonians",
+    "testament": "NT",
+    "section": "Pauline Epistles",
+    "chapterCount": 5,
+    "isSupplementary": false
+  },
+  {
+    "id": "2th",
+    "name": "2 Thessalonians",
+    "testament": "NT",
+    "section": "Pauline Epistles",
+    "chapterCount": 3,
+    "isSupplementary": false
+  },
+  {
+    "id": "1ti",
+    "name": "1 Timothy",
+    "testament": "NT",
+    "section": "Pauline Epistles",
+    "chapterCount": 6,
+    "isSupplementary": false
+  },
+  {
+    "id": "2ti",
+    "name": "2 Timothy",
+    "testament": "NT",
+    "section": "Pauline Epistles",
+    "chapterCount": 4,
+    "isSupplementary": false
+  },
+  {
+    "id": "tit",
+    "name": "Titus",
+    "testament": "NT",
+    "section": "Pauline Epistles",
+    "chapterCount": 3,
+    "isSupplementary": false
+  },
+  {
+    "id": "phm",
+    "name": "Philemon",
+    "testament": "NT",
+    "section": "Pauline Epistles",
+    "chapterCount": 1,
+    "isSupplementary": false
+  },
+  {
+    "id": "heb",
+    "name": "Hebrews",
+    "testament": "NT",
+    "section": "General Epistles",
+    "chapterCount": 13,
+    "isSupplementary": false
+  },
+  {
+    "id": "jas",
+    "name": "James",
+    "testament": "NT",
+    "section": "General Epistles",
+    "chapterCount": 5,
+    "isSupplementary": false
+  },
+  {
+    "id": "1pe",
+    "name": "1 Peter",
+    "testament": "NT",
+    "section": "General Epistles",
+    "chapterCount": 5,
+    "isSupplementary": false
+  },
+  {
+    "id": "2pe",
+    "name": "2 Peter",
+    "testament": "NT",
+    "section": "General Epistles",
+    "chapterCount": 3,
+    "isSupplementary": false
+  },
+  {
+    "id": "1jn",
+    "name": "1 John",
+    "testament": "NT",
+    "section": "General Epistles",
+    "chapterCount": 5,
+    "isSupplementary": false
+  },
+  {
+    "id": "2jn",
+    "name": "2 John",
+    "testament": "NT",
+    "section": "General Epistles",
+    "chapterCount": 1,
+    "isSupplementary": false
+  },
+  {
+    "id": "3jn",
+    "name": "3 John",
+    "testament": "NT",
+    "section": "General Epistles",
+    "chapterCount": 1,
+    "isSupplementary": false
+  },
+  {
+    "id": "jud",
+    "name": "Jude",
+    "testament": "NT",
+    "section": "General Epistles",
+    "chapterCount": 1,
+    "isSupplementary": false
+  },
+  {
+    "id": "rev",
+    "name": "Revelation",
+    "testament": "NT",
+    "section": "Apocalyptic",
+    "chapterCount": 22,
+    "isSupplementary": false
+  }
+]
