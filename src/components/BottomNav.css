@@ -1,0 +1,28 @@
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--bg);
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+  /* iOS safe area padding for the home indicator */
+  padding-bottom: calc(10px + env(safe-area-inset-bottom));
+  z-index: 1000;
+}
+
+.nav-item {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.nav-item.active {
+  color: var(--accent);
+  background-color: var(--accent-bg);
+  font-weight: bold;
+}
