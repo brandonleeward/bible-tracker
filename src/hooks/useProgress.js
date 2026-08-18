@@ -12,7 +12,7 @@ export function useProgress() {
     return acc;
   }, {});
 
-  const toggleChapter = async (bookId, chapter) => {
+  const toggleChapter = async (bookId, chapter, isPastProgress = false) => {
     const key = [bookId, chapter];
     const existing = await db.progress.get(key);
     const today = getTodayDateString();
@@ -26,7 +26,9 @@ export function useProgress() {
       if (existing) {
         // Untoggle
         await db.progress.delete(key);
-        daily.chaptersRead = Math.max(0, daily.chaptersRead - 1);
+        if (!isPastProgress) {
+          daily.chaptersRead = Math.max(0, daily.chaptersRead - 1);
+        }
       } else {
         // Toggle
         await db.progress.put({
@@ -34,7 +36,45 @@ export function useProgress() {
           chapter,
           completedAt: Date.now()
         });
-        daily.chaptersRead += 1;
+        if (!isPastProgress) {
+          daily.chaptersRead += 1;
+        }
+      }
+      await db.dailyLog.put(daily);
+    });
+  };
+
+  const toggleBookComplete = async (bookId, chapterCount, isPastProgress = false) => {
+    const today = getTodayDateString();
+    
+    await db.transaction('rw', db.progress, db.dailyLog, async () => {
+      let daily = await db.dailyLog.get(today);
+      if (!daily) {
+        daily = { date: today, chaptersRead: 0 };
+      }
+
+      const bookProgress = progressMap[bookId] || {};
+      const completedCount = Object.keys(bookProgress).length;
+      const isFullyComplete = completedCount === chapterCount;
+
+      if (isFullyComplete) {
+        // Un-complete entire book
+        for (let i = 1; i <= chapterCount; i++) {
+          await db.progress.delete([bookId, i]);
+          if (!isPastProgress) {
+            daily.chaptersRead = Math.max(0, daily.chaptersRead - 1);
+          }
+        }
+      } else {
+        // Complete all uncompleted chapters
+        for (let i = 1; i <= chapterCount; i++) {
+          if (!bookProgress[i]) {
+            await db.progress.put({ bookId, chapter: i, completedAt: Date.now() });
+            if (!isPastProgress) {
+              daily.chaptersRead += 1;
+            }
+          }
+        }
       }
       await db.dailyLog.put(daily);
     });
@@ -43,6 +83,7 @@ export function useProgress() {
   return {
     progressRaw,
     progressMap,
-    toggleChapter
+    toggleChapter,
+    toggleBookComplete
   };
 }

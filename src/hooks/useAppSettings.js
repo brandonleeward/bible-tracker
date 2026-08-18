@@ -24,8 +24,10 @@ export function useAppSettings() {
   const includeSupplemental = settings['include_supplemental'] || false;
   
   const goalType = settings['goal_type'] || 'pace'; // 'pace' or 'date'
-  const goalPace = Number(settings['goal_pace']) || 3;
+  const goalPace = settings['goal_pace'] !== undefined ? settings['goal_pace'] : 3;
+  const goalFrequency = settings['goal_frequency'] || 'day'; // 'day', 'week', 'month'
   const goalDate = settings['goal_date'] || ''; // YYYY-MM-DD
+  const startedReadingDate = settings['started_reading_date'] || ''; // YYYY-MM-DD
   
   const books = CANONS[activeCanonKey] || CANONS['protestant'];
   
@@ -39,7 +41,9 @@ export function useAppSettings() {
     includeSupplemental,
     goalType,
     goalPace,
+    goalFrequency,
     goalDate,
+    startedReadingDate,
     books,
     setSetting
   };

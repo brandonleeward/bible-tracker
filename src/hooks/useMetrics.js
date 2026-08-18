@@ -5,7 +5,7 @@ import { useProgress } from './useProgress';
 import { getTodayDateString } from '../utils/date';
 
 export function useMetrics() {
-  const { books, includeSupplemental, goalType, goalPace, goalDate } = useAppSettings();
+  const { books, includeSupplemental, goalType, goalPace, goalDate, startedReadingDate } = useAppSettings();
   const { progressMap } = useProgress();
   
   const dailyLogs = useLiveQuery(() => db.dailyLog.toArray(), []) || [];
@@ -52,19 +52,28 @@ export function useMetrics() {
     }
   }
 
-  // 3. Rolling 7-day Velocity
-  let last7DaysRead = 0;
-  for (let i = 0; i < 7; i++) {
-    const d = new Date();
-    d.setDate(d.getDate() - i);
-    const dateStr = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
-    const log = dailyLogs.find(l => l.date === dateStr);
-    if (log) {
-      last7DaysRead += log.chaptersRead;
-    }
-  }
+  // 3. Velocity (7-day or Lifetime if Started Date is set)
+  let velocity = 0;
   
-  const velocity = +(last7DaysRead / 7).toFixed(1);
+  if (startedReadingDate) {
+    const start = new Date(startedReadingDate);
+    const now = new Date();
+    const diffTime = now - start;
+    const diffDays = Math.max(1, Math.ceil(diffTime / (1000 * 60 * 60 * 24)));
+    velocity = +(completedChapters / diffDays).toFixed(1);
+  } else {
+    let last7DaysRead = 0;
+    for (let i = 0; i < 7; i++) {
+      const d = new Date();
+      d.setDate(d.getDate() - i);
+      const dateStr = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+      const log = dailyLogs.find(l => l.date === dateStr);
+      if (log) {
+        last7DaysRead += log.chaptersRead;
+      }
+    }
+    velocity = +(last7DaysRead / 7).toFixed(1);
+  }
 
   // 4. Pace Forecasting
   const chaptersRemaining = totalChapters - completedChapters;
